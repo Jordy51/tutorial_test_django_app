@@ -2,6 +2,8 @@
     {% load static  %}
     <link href="{% static 'tinymce/css/prism.css'%}" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.207/distr/fira_code.css">
+
     <!-- Compiled and minified CSS -->
     <link href="{% static 'main/css/materialize.css' %}" rel="stylesheet">
 
@@ -23,10 +25,11 @@
         </div>
     </nav>
 
-
-    {% block content %}
-    {% endblock %}
-
+    <div class="container">
+        <br>
+        {% block content %}
+        {% endblock %}
+    </div>
 </body>
 
 <script src="{% static 'tinymce/js/prism.js' %}"></script>
