@@ -1,12 +1,8 @@
 <head>
     {% load static  %}
     <link href="{% static 'tinymce/css/prism.css'%}" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.207/distr/fira_code.css">
-
     <!-- Compiled and minified CSS -->
     <link href="{% static 'main/css/materialize.css' %}" rel="stylesheet">
-
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
@@ -14,22 +10,15 @@
 
 <body>
 
-    <nav>
-        <div class="nav-wrapper">
-            <a href="#" class="brand-logo">Tutorials!</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="/">Home</a></li>
-                <li><a href="/register">Register</a></li>
-                <li><a href="/login">LogIn</a></li>
-            </ul>
-        </div>
-    </nav>
+    {% include "main/includes/navbar.html" %}
+    {% include "main/includes/messages.html" %}
 
     <div class="container">
         <br>
         {% block content %}
         {% endblock %}
     </div>
+
 </body>
 
 <script src="{% static 'tinymce/js/prism.js' %}"></script>
